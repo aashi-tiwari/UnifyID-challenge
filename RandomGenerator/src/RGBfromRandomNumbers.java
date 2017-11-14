@@ -49,24 +49,22 @@ public class RGBfromRandomNumbers {
 		        
 		         color = new Color(red, green, blue);
 		         img.setRGB(i, j, color.getRGB());
-			 }
+		    }
 		}
 		File f = new File("Output.png");
 		 try{
 		       ImageIO.write(img, "png", f);
-		     }catch(IOException e){
+		     }
+		catch(IOException e){
 		       System.out.println("Error: " + e);
 		     }
-		
-		
 	}
+	
 	public static void main(String[] args) throws IOException {
 		
 		int width = 128;
 		int height = 128;
 		List<Integer> random_no = randomNumberGenerator();
-		ImageCreation(random_no, height, width);
-		
+		ImageCreation(random_no, height, width);	
 	}
-
 }
