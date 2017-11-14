@@ -1,3 +1,6 @@
+// created by Aashi Tiwari
+//out of 3 requirement I have chosen first i.e Using random numbers create An RGB bitmap picture of 128x128 pixels.
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +15,7 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
 public class RGBfromRandomNumbers {
-	
+	// connecting from random.org to get truly random numbers and storing in list of integers.
 	public static List<Integer> randomNumberGenerator() throws IOException{
 		URL random_org = new URL("https://www.random.org/integers/?num=256&min=0&max=255&col=1&base=10&format=plain&rnd=new");
 		HttpURLConnection myConnection =  (HttpURLConnection) random_org.openConnection();
@@ -28,7 +31,7 @@ public class RGBfromRandomNumbers {
 	}
 	
 	
-	
+	//Creating RGB bitmap of size 128*128 using java libraries and getting random numbers form list
 	public static void ImageCreation(List<Integer> random_no,int height , int width) throws IOException{
 		
 		BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
